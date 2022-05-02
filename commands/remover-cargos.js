@@ -34,7 +34,7 @@ module.exports = {
       return "Usuário não encontrado";
     }
 
-    args.map(async (arg) => {
+    args.map((arg) => {
       const roleIdOrName = arg.replace(/[<@!&>]/g, "");
       let role = guild?.roles.cache.get(roleIdOrName);
 
