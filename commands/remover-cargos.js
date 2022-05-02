@@ -1,14 +1,13 @@
-const quantityOfRolesOptions = 11;
-const rolesOptions = [...Array(quantityOfRolesOptions).keys()]
-  .filter((item) => item !== 0)
-  .map((item) => {
-    return {
-      name: `cargo-${item}`,
-      description: `Cargo para ser atribuido ao usuário`,
-      type: "ROLE",
-      required: item === 1,
-    };
-  });
+const quantityOfRolesOptions = 10;
+const rolesOptions = [...Array(quantityOfRolesOptions).keys()].map((item) => {
+  const number = item + 1;
+  return {
+    name: `cargo-${number}`,
+    description: `Cargo para ser atribuido ao usuário`,
+    type: "ROLE",
+    required: number === 1,
+  };
+});
 
 module.exports = {
   category: "Configuration",
